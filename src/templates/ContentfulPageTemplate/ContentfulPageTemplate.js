@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import {graphql} from "gatsby";
 import TemplatePageFirstBlock from "../../components/TemplatePageFirstBlock/TemplatePageFirstBlock";
+import TemplatePageSection from "../../components/TemplatePageSocialSection/TemplatePageSocialSection";
 
 const ContentfulPageTemplate = ({ data }) => (
     <Layout title={data.contentfulTemplate.slug}>
@@ -12,6 +13,12 @@ const ContentfulPageTemplate = ({ data }) => (
           firstImage={data.contentfulTemplate.titleSectionFirstImage.gatsbyImageData}
           secondImage={data.contentfulTemplate.titleSectionSecondImage.gatsbyImageData}
           thirdImage={data.contentfulTemplate.titleSectionThirdImage.gatsbyImageData}
+        />
+        <TemplatePageSection
+          firstLink={data.contentfulTemplate.socialSectionFirstLink}
+          secondLink={data.contentfulTemplate.socialSectionSecondLink}
+          thirdLink={data.contentfulTemplate.socialSectionThirdLink}
+          fourthLink={data.contentfulTemplate.socialSectionFourthLink}
         />
     </Layout>
 )
@@ -31,7 +38,23 @@ export const query = graphql`
       }
       titleSectionThirdImage {
         gatsbyImageData
-      }      
+      } 
+      socialSectionFirstLink {
+        description
+        gatsbyImageData
+      }
+      socialSectionSecondLink {
+        description
+        gatsbyImageData
+      }
+      socialSectionThirdLink {
+        description
+        gatsbyImageData
+      }
+      socialSectionFourthLink {
+        description
+        gatsbyImageData
+      }     
     }
   }
 `
