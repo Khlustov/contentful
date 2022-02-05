@@ -4,7 +4,8 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import {graphql} from "gatsby";
 import TemplatePageFirstBlock from "../../components/TemplatePageFirstBlock/TemplatePageFirstBlock";
-import TemplatePageSection from "../../components/TemplatePageSocialSection/TemplatePageSocialSection";
+import TemplatePageSocialSection from "../../components/TemplatePageSocialSection/TemplatePageSocialSection";
+import TemplatePageBannersSection from "../../components/TemplatePageBannersSection/TemplatePageBannersSection";
 
 const ContentfulPageTemplate = ({ data }) => (
     <Layout title={data.contentfulTemplate.slug}>
@@ -14,12 +15,13 @@ const ContentfulPageTemplate = ({ data }) => (
           secondImage={data.contentfulTemplate.titleSectionSecondImage.gatsbyImageData}
           thirdImage={data.contentfulTemplate.titleSectionThirdImage.gatsbyImageData}
         />
-        <TemplatePageSection
+        <TemplatePageSocialSection
           firstLink={data.contentfulTemplate.socialSectionFirstLink}
           secondLink={data.contentfulTemplate.socialSectionSecondLink}
           thirdLink={data.contentfulTemplate.socialSectionThirdLink}
           fourthLink={data.contentfulTemplate.socialSectionFourthLink}
         />
+        <TemplatePageBannersSection/>
     </Layout>
 )
 
