@@ -1,13 +1,15 @@
-import React from "react";
-import {Link} from "gatsby";
+import './banner.less';
 
-const Banner = ({ bannerClassName }) => {
+import React from "react";
+import {GatsbyImage} from "gatsby-plugin-image";
+
+const Banner = ({ bannerClassName, link, image }) => {
 
     return (
         <div className={bannerClassName}>
-            <Link to={'#'}>
-                djfhsjf
-            </Link>
+            <a href={link} className="banner-link">
+                <GatsbyImage image={image} alt="image" className="banner-image"/>
+            </a>
         </div>
     )
 };

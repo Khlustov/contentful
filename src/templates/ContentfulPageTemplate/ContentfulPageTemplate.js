@@ -21,7 +21,14 @@ const ContentfulPageTemplate = ({ data }) => (
           thirdLink={data.contentfulTemplate.socialSectionThirdLink}
           fourthLink={data.contentfulTemplate.socialSectionFourthLink}
         />
-        <TemplatePageBannersSection/>
+        <TemplatePageBannersSection
+          firstLink={data.contentfulTemplate.bannerSectionFirstLink}
+          secondLink={data.contentfulTemplate.bannerSectionSecondLink}
+          thirdLink={data.contentfulTemplate.bannerSectionThirdLink}
+          fourthLink={data.contentfulTemplate.bannerSectionFourthLink}
+          fifthLink={data.contentfulTemplate.bannerSectionFifthLink}
+          sixthLink={data.contentfulTemplate.bannerSectionSixthLink}
+        />
     </Layout>
 )
 
@@ -56,7 +63,31 @@ export const query = graphql`
       socialSectionFourthLink {
         description
         gatsbyImageData
-      }     
+      }  
+      bannerSectionFirstLink {
+        description
+        gatsbyImageData
+      }
+      bannerSectionSecondLink {
+        description
+        gatsbyImageData
+      }
+      bannerSectionThirdLink {
+        description
+        gatsbyImageData
+      }
+      bannerSectionFourthLink {
+        description
+        gatsbyImageData
+      }
+      bannerSectionFifthLink {
+        description
+        gatsbyImageData
+      }
+      bannerSectionSixthLink {
+        description
+        gatsbyImageData
+      }   
     }
   }
 `

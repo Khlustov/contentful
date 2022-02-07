@@ -1,7 +1,6 @@
 import './bigLinkContainer.less';
 
 import React from "react";
-import {Link} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const BigLinkContainer = ({ image, link }) => {
@@ -9,9 +8,9 @@ const BigLinkContainer = ({ image, link }) => {
 
     return (
         <div className="big-link">
-            <Link to={link}>
+            <a href={link}>
                 <GatsbyImage alt="image" image={img} className="card-image"/>
-            </Link>
+            </a>
         </div>
     )
 }
