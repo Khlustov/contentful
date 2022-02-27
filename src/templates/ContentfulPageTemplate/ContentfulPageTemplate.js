@@ -9,7 +9,7 @@ import TemplatePageBannersSection from "../../components/TemplatePageBannersSect
 import TemplatePageExternalPresentation from '../../components/TemplatePageExternalPresentation/TemplatePageExternalPresentation';
 import TemplatePageInternalPresentation from '../../components/TemplatePageInternalPresentation/TemplatePageInternalPresentation';
 import Swag from '../../components/Swag/Swag';
-import Marketing from '../../components/Marketing/MArketing';
+import Marketing from '../../components/Marketing/Marketing';
 import Brochure from '../../components/Brochure/Brochure';
 
 const ContentfulPageTemplate = ({ data }) => (
